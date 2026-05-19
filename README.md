@@ -1,6 +1,8 @@
 # Pet Generate
 
-Pet Generate converts an uploaded image into a compact pixel sprite set with mood variants, animation preview, and export files.
+Pet Generate is currently reset to a UI-only benchmark starting point.
+
+This repository intentionally contains only the static Next.js UI mock. Upload handling, generation, export, validation, persistence, tests, and production behavior must be implemented by the assigned harness from the Linear ticket set.
 
 ## Run
 
@@ -15,20 +17,12 @@ Open `http://127.0.0.1:3000`.
 
 ```bash
 npm run typecheck
-npm run test
 npm run build
-npm run test:e2e
 ```
-
-## Environment
-
-- `PET_GENERATE_MODE=mock`: deterministic local generator. Default.
-- `PET_GENERATE_MODE=real`: reserved adapter mode for an image-generation backend. Requires `OPENAI_API_KEY`; otherwise the API returns a controlled error.
-- `PET_GENERATE_MAX_UPLOAD_MB=8`: upload limit.
 
 ## LHP lane
 
-This repository is the `pet1` LHP Harness lane.
+This repository is the `pet1` LHP Harness lane. The implementation must be produced by the LHP harness command flow, not by manual direct implementation.
 
 Linear ticket set:
 
@@ -39,4 +33,4 @@ Linear ticket set:
 - AGE-554, AGE-584: real/mock adapter, error handling, operations docs
 - AGE-555, AGE-585: unit, integration, E2E, evidence
 
-The implementation keeps the UI-only reference as the visual source of truth and does not include code from the Google Drive reference project.
+The UI mock is the visual source of truth for the autonomous harness run.

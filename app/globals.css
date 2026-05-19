@@ -134,11 +134,6 @@ input {
   padding: 22px;
 }
 
-.dropzone[data-dragging="true"] {
-  border-color: #111111;
-  color: #111111;
-}
-
 .dropzone input {
   display: none;
 }
@@ -228,7 +223,7 @@ input {
   gap: 12px;
 }
 
-.animation-stage {
+.animation-wrap .frame-tile {
   width: 130px;
 }
 
